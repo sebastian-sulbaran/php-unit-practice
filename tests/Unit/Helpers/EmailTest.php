@@ -10,8 +10,10 @@ class EmailTest extends TestCase
 
     public function test_example()
     {
-        $email = "admin@email.com";
-        $result = Email::validate($email);
-        $this->assertTrue(true);
+        $result = Email::validate("admin@email.com");
+        $this->assertTrue($result); //when its ok
+
+        $result = Email::validate("admin@@email.com");
+        $this->assertFalse($result); //when its not ok
     }
 }
