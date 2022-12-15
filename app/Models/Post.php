@@ -19,4 +19,9 @@ class Post extends Model
         return Str::replace(' ', '-', $this->name);
     }
 
+    public function href()
+    {
+        return "blog/{$this->slug}";
+    }
+
 }

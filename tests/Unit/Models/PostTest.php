@@ -29,4 +29,11 @@ class PostTest extends TestCase
 
     }
 
+    public function test_get_href()
+    {
+        $post = new Post;
+        $post->name = "Proyecto en PHP";
+        $this->assertEquals('blog/proyecto-en-php', $post->href());
+    }
+
 }
