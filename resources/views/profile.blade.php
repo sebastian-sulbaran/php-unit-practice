@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            {{$error}}
+        @endforeach
+    @endif
+
     <form action="profile" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="photo" id="photo">
