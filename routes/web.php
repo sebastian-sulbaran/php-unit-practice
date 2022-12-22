@@ -21,6 +21,8 @@ Route::get('/', function () {
     );
 });
 
+Route::post('tags', [App\Http\Controllers\TagController::class, 'store']);
+
 Route::get('about', function () {
     return "hola";
 });
