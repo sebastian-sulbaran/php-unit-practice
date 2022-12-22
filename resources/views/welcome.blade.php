@@ -12,7 +12,14 @@
         </h4>
         <table>
             @forelse($tags as $tag)
-                @empty
+
+                <tr>
+                    <td>
+                        {{$tag->name}}
+                    </td>
+                </tr>
+
+            @empty
                 <tr>
                     <td>No hay etiquetas</td>
                 </tr>
