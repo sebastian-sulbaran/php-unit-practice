@@ -13,4 +13,12 @@ class TagController extends Controller
 
         return redirect('/');
     }
+
+    public function destroy(Tag $tag)
+    {
+//        dd($tag);
+        $tag->delete();
+
+        return redirect('/');
+    }
 }
